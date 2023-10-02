@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.Arrays;
 
@@ -119,12 +120,13 @@ public class Polynomial{
                 
             return removezero(new_non_zero,new_exp,length);
             
-        }
+
         
         public double evaluate(double x){
             double sum = 0;
-            for (int i = 0; i < this.non_zero.length; i++){
+           for (int i = 0; i < this.non_zero.length; i++){
                 sum += this.non_zero[i]*Math.pow(x,this.exponents[i]);
+
                 }
                 return sum;
             }
@@ -132,6 +134,7 @@ public class Polynomial{
         public boolean hasRoot(double x){
             return (this.evaluate(x) == 0);
         }
+
         
         public Polynomial multiply(Polynomial p){
             int length = this.non_zero.length*p.non_zero.length;
@@ -187,4 +190,5 @@ public class Polynomial{
             }
         
         
+
     }
